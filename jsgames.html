@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>Games</title>
+  <meta content="My first page" charset="UTF-8">
+  <link rel="stylesheet" href="jamessite.css">
+<script src="components.js" type="text/javascript" charset="UTF-8" defer></script>
+</head>
+<header-component></header-component>
+<body>
+  <div class="welcome">
+    <h1>Games Corner</h1>
+    <p>
+      Here is a collection of small games I have made for you to enjoy.
+      Simply click rock paper or scissors to try your luck against the computer.
+      Also, click to spin the coin in the bottom left.
+      Thank you to WDS for the framework for RPS: <a href="https://www.youtube.com/watch?v=1yS-JV4fWqY&list=LL&index=2 ">WDS' Video</a> <br> <br>
+      Looking for something better?  <a href="mechAliens.html">Try Mechanical Aliens!</a> 
+    </p>
+  </div>
+  <img class="flip" id="flip" type="coinbutton" src="resources/coin.png" onclick="fnClick()"></img>
+  <script>
+    /* Coin Flip */
+    let coinbutton = document.getElementById("flip");
+    function fnClick(event) {
+      let num = Math.random();
+      if (num < 0.5) {
+          coinbutton.src = "resources/coinhead.gif";
+      } else {
+          coinbutton.src = "resources/cointail.gif";
+      }
+    }
+    coinbutton.addEventListener("click", fnClick);    
+  </script>
+  <div class="rps">
+    <div class="selections">
+      <button class="selection" data-selection="rock"><img src="resources/rock.png"></button>
+      <button class="selection" data-selection="paper"><img src="resources/paper.png"></button>
+      <button class="selection" data-selection="scissors"><img src="resources/scissors.png"></button>
+    </div>
+      <div class="results">
+        <div>
+          You
+          <span class="result-score" data-your-score>0</span>
+        </div>
+        <div data-final-column>
+          Comp
+          <span class="result-score" data-computer-score>0</span>
+        </div>
+        <h1 id="wins" class="wins"></h1>
+        <!-- <div class="result-selection winner">🤘</div>
+        <div class="result-selection">✌️</div> -->
+      </div>
+  </div>
+  </body>
+
+</body>
+</html>

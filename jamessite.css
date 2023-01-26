@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body {
+    font-family: 'Roboto Slab';
+    background-color: #6e4931;
+    color: #f1d5b9;
+    position: relative;
+    font-size: larger;
+    top: 80px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.welcome {
+    background-color: #281a12;
+    width: 1000px;
+    padding: 15px;
+}
+
+.leftcolumn {
+    float: left;
+    width: 750px;
+}
+
+.rightcolumn {
+    float: left;
+    width: 250px;
+    padding-left: 20px;
+}
+
+.card {
+    background-color: #281a12;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.rules {
+    height: 300px;
+    width: 390px;
+    background-color: #281a12;
+    float: left;
+    margin: 0 0;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+.embed {
+    background-color: #281a12;
+    display: inline-block;
+    margin: 0 0;
+}
+
+.social {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.social img {
+    height: 50px;
+    width: 50px;
+}
+
+/* This is for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    right: 0;
+    background-color: #281a12;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+ }
+ 
+.logo {
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    object-fit: cover;
+ }
+
+.nav_links {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+
+ }
+
+.nav_links li {
+    color: #ede0d4;
+    display: inline-block;
+    padding: 0px 20px;
+    border-left: 1px solid;
+ }
+
+.nav_links li a {
+    color: #ede0d4;
+    text-decoration: none;
+ }
+
+.nav_links li a:hover {
+    color: #007d26;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li:hover {
+    color: #007d26;
+    transition: all 0.3s ease 0s;
+}
+
+/* Dropdown Menus */
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: #281a12;
+  }
+  
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+.dropdown-content a:hover {
+    color:#007d26;
+    background-color: #ede0d4;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* This is for the Side Nav */
+.sidenav  {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #281a12;
+    overflow-x: hidden;
+    padding-top: 40px;
+    transition: 0.5s;
+    text-align: right;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #ede0d4;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color:#007d26;
+    background-color: #ede0d4;
+}
+
+.sidenav .items {
+    width: 250px;
+}
+
+.profile {
+    text-align: center;
+    width: 250px;
+    font-size: 20px;
+    position: sticky;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile h3 {
+    margin: -20px;
+}
+
+/* index */
+.todo p {
+	background-color: #281a12;
+	margin: 10px 10px;
+	padding: 10px 10px;
+	border: 1px green;
+	}
+
+/* This is for the sidebar's open/close button */
+#main {
+    z-index: 2;
+}
+
+.container {
+    z-index: 2;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #007d26;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+.change .bar1 {transform: translate(0, 11px) rotate(-45deg);}
+.change .bar2 {opacity: 0;}
+.change .bar3 {transform: translate(0, -11px) rotate(45deg);}
+
+/* This is for the Webm section */
+.video {
+    border: 1px solid #ede0d4;
+    background-color: #281a12;
+
+}
+.videopage {
+    align-items: center;
+    text-align: center;
+}
+
+/* This is for the Questionaire section */
+.forminfo {
+    width: 500px;
+    background-color: #281a12;
+    text-align:justify;
+    padding: 25px 10px;
+    margin: 0 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.question {
+    text-align: center;
+}
+
+.button {
+    border: 1px solid #ede0d4;
+    color: #ede0d4;
+    border-radius: 50px;
+    background-color: #007d26;
+    display:inline-block;
+    cursor: pointer;
+    font-size: 28px;
+    padding: 0px 50px;
+    transition: all 0.3s ease 0s;
+}
+
+.button h3 {
+    background-color: #007d26;
+    transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+    background-color: #ede0d4;
+    color: #007d26;
+}
+
+.button:hover h3 {
+    background-color: #ede0d4;
+}
+
+/* For the RPS game */
+
+.selections {
+    font-size: x-large;
+    text-align: center;
+}
+
+.selection {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 8rem;
+    transition: 100ms;
+}
+
+.rps {
+    width: 700px;
+}
+
+.rps img {
+    height: 100px;
+    width: 100px;
+}
+
+.selection:hover {
+    transform: scale(1.2);
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    overflow: hidden;
+    height: 450px;
+    background-color: #281a12;
+}
+
+.result-score {
+    margin-left: .1rem;
+    color: rgb(255, 255, 255);
+
+}
+
+.result-selection {
+    opacity: .5;
+    font-size: 8rem;
+}
+
+.result-selection.winner {
+    opacity: 1;
+
+}
+
+.wins {
+    font-size: 120px;
+    display: inline;
+    position: absolute;
+    justify-content: center;
+    visibility: hidden;
+    pointer-events: none;
+    text-shadow: 4px 4px 8px #000000;
+}
+
+.flip {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    left: 5px;
+    bottom: 0;
+    position: fixed;
+}
+
+/* Mecha Aliens */
+#layer1, #layer2, #layer3, #layer4, #player, #angler1, #angler2, #lucky, #projectile, #gears, #hivewhale, #drone, #smokeExplosion, #fireExplosion {
+    display: none;
+}
+
+/* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+
+#canvas1 {
+    border: 5px solid black;
+    background: #4d79bc;
+    font-family: 'Fredoka One', cursive;
+}
