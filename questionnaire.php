@@ -92,16 +92,12 @@ fclose($file);
       </tr>
       <td colspan="2">
         <textarea cols="50" rows="5" name="nega"></textarea>
-        
       </td>
-
-
   </table>
   <input class="button" type="submit" name="submit"/>
 </form>
-
  
-        <!---
+        <!--- Unused questionnaire template
         <div class="question">
           <h4>Question 2</h4>
           <h2>I try to keep up to date with the latest fashion in active wear.</h2>
