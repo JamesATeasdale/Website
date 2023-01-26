@@ -77,7 +77,8 @@ function navAnim(x) {
 
 function randomVid() {
     var video = document.getElementById('video');
-    var number = Math.floor(Math.random() * 3) + 1;
+    // change the arbitrary number to the number of files in webms/, then run enumerate.py
+    var number = Math.floor(Math.random() * 42) + 1;
     video.src = "webms/" + number +'.webm#t=0.1';
 }
 
@@ -165,4 +166,3 @@ function randomSelection() {
     const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
     return SELECTIONS[randomIndex]
 }
-//test
