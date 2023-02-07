@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
+
 body {
     font-family: 'Roboto Slab';
     background-color: #6e4931;
@@ -17,6 +18,7 @@ body {
 .welcome {
     background-color: #281a12;
     width: 1000px;
+    margin: 50px 0;
     padding: 15px;
 }
 
@@ -50,13 +52,6 @@ body {
     display: table;
     clear: both;
 }
-
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-      width: 100%;
-      padding: 0;
-    }
-  }
 
 .embed {
     background-color: #281a12;
@@ -382,3 +377,24 @@ textarea {
     background: #4d79bc;
     font-family: 'Fredoka One', cursive;
 }
+
+@media only screen and (max-width: 1050px) {
+    .rightcolumn {
+        display: none;
+    }
+    .welcome {
+        width: 750px;
+    }
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn, .welcome {
+      width: 100%;
+    }
+    .nav_links {
+        display: none;
+    }
+  }

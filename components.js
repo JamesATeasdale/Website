@@ -22,7 +22,7 @@ class Header extends HTMLElement {
                             <a href="mechAliens.html">Mech Aliens</a>
                         </div>
                     </li>
-                    <li><a href="questionnaire.php">Questionnaire</a></li>
+                    <li><a href="questionnaire.php">Feedback</a></li>
                 </ul>
             <div id="sidenav" class="sidenav">
                 <div class="profile">
@@ -31,10 +31,12 @@ class Header extends HTMLElement {
                     <p>Enthusiest</p>
                 </div>
                 <div class="items">
+                    <a href="index.html">Home</a>
+                    <a href="video.html">Video</a>
+                    <a href="jsgames.html">Games</a>
+                    <a href="questionnaire.php">Feedback</a>
                     <a href="https://www.codecademy.com/profiles/jamesTeasdale9097991433">Codecademy</a>
-                    <a href="https://www.youtube.com/channel/UCcu0L3IHVaEGfBcN7tUhATw">YouTube</a>
                     <a href="https://github.com/JamesATeasdale">Github</a>
-                    <a href="https://www.twitter.com/ShyGuro">Twitter</a>
                     <a href="mailto:jamesadamteasdale@gmail.com">Email Me!</a>
                     <a href="#">Server</a>
                     <a href="smb://james@192.168.1.94/James/server/coding/html_playground/resources/james_teasdale.pdf" download="james_teasdale.pdf">CV</a>
