@@ -9,7 +9,7 @@ class Header extends HTMLElement {
             <a href="index.html"><img class="logo" src="resources/logo.png"></a>
                 <ul class="nav_links">
                     <li><a href="video.html">Video</a></li>
-                    <li class="dropdown">Projects
+                    <li class="dropdown"><a href="#">Projects</a>
                         <div class="dropdown-content">
                             <a href="#home">Adventure</a>
                             <a href="#scraper">Scraper</a>
@@ -57,6 +57,8 @@ class Header extends HTMLElement {
         <a href="https://www.youtube.com/channel/UCcu0L3IHVaEGfBcN7tUhATw"><img src="./resources/youtube.png"></a>
         <a href="https://www.facebook.com/ishykel/"><img  src="./resources/facebook.png"></a>
       </div>
+
+<div id="dimscreen" style="width: 0%;" onclick="toggleNav();"></div>
       `;
   }
 }
@@ -66,9 +68,11 @@ customElements.define('header-component', Header);
 /* Navigation button in the top-right */
 
 function toggleNav() {
-	var sidenav = document.getElementById("sidenav"),
+	let sidenav = document.getElementById("sidenav");
+    let dimscreen = document.getElementById("dimscreen");
     main = document.getElementById("main");
     sidenav.style.width = sidenav.style.width == "250px" ? '0' : '250px';
+    dimscreen.style.width = dimscreen.style.width == '100%' ? '0%' : '100%';
 }
 
 function navAnim(x) {
