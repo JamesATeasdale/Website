@@ -38,6 +38,10 @@ body {
     width: 50px;
 }
 
+.social a {
+    padding: 0px;
+}
+
 .welcome {
     background-color: rgb(56, 56, 56);
     width: 990px;
@@ -83,7 +87,6 @@ header {
     z-index: 3;
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-    opacity: 1;
  }
  
 .logo {
@@ -115,21 +118,27 @@ header {
 
 .dropdown-content {
     display: none;
-    position: absolute;
-    min-width: 160px;
+    position: fixed;
+    width: 220px;
     z-index: 2;
-    background-color: rgb(56, 56, 56);;
+    background-color: rgb(56, 56, 56);
+
   }
   
-.dropdown-content a, .dropdown:hover .dropdown-content {
-    padding: 8px 12px;
+.dropdown-content a {
     text-decoration: none;
-    display: block;
-  }
+    padding: 0;
+    border-bottom: solid 5px rgb(31, 31, 31);
+    width: 100%;
+  } 
 
-.dropdown-content a:hover {
+.dropdown-content a:hover, .sidenav a:hover {
     color:#007d26;
     background-color: #ffffff;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 
 /* This is for the Side Nav */
@@ -148,15 +157,11 @@ header {
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 0;
     display: block;
     transition: 0.3s;
     font-size: 30px;
-}
-
-.sidenav a:hover {
-    color:#007d26;
-    background-color: #ffffff;
+    border-bottom: solid 5px rgb(18, 18, 18);
 }
 
 .sidenav .items, .profile {
@@ -173,15 +178,12 @@ header {
 }
 
 /* This is for the sidebar's open/close button */
-#main {
-    z-index: 3;
-    position: relative;
-}
 
-.container, .dropdown {
+#container, .dropdown {
     display: inline-block;
     cursor: pointer;
     padding: 10px;
+    z-index: 3;
   }
   
 .bar1, .bar2, .bar3 {
@@ -197,18 +199,20 @@ header {
 .change .bar3 {transform: translate(0, -11px) rotate(45deg);}
 
 /* This is for the Webm section */
-#video {
+video {
     border: 1px solid #ffffff;
-    background-color: rgb(56, 56, 56);;
+    background-color: rgb(56, 56, 56);
+    display: block;
+    margin: 20px auto;
 }
 
 /* This is for the Questionaire section */
 .forminfo {
     width: 500px;
     background-color: rgb(56, 56, 56);;
-    text-align:justify;
+    text-align: justify;
     padding: 25px 10px;
-    margin: 0 0;
+    margin: 0;
 }
 
 textarea {
@@ -223,11 +227,13 @@ textarea {
     border: 1px solid #ffffff;
     border-radius: 50px;
     background-color: #007d26;
-    display: inline-block;
     cursor: pointer;
     font-size: 28px;
     padding: 0px 50px;
     transition: all 0.3s ease 0s;
+    width: fit-content;
+    display: block;
+    margin: auto;
 }
 
 .button:hover {

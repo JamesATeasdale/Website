@@ -19,9 +19,9 @@
       </p>
     </div>
     <div class="row">
+      <div class="leftcolumn">
       <!-- 
       ### CARD TEMPLATE
-      <div class="leftcolumn">
         <div class="card">
           <h2>Finish the RPS game</h2>
           <h5>12th Nov 2022</h5>
@@ -31,8 +31,36 @@
           </p>
         </div>
         -->
-        <div class="row">
-        <div class="leftcolumn">
+          <div class="card">
+            <h2>Small fixes to UI and Cleanup</h2>
+            <h5>10th Feb 2022</h5>
+            <div class="fakeimg"></div>
+            <p>
+              The small bugs I created with my last patch have been on my mind all night. I was excited to wake up and fix them. The bugs included the video page which had its elements all over the place, the sidebar menu button not transitioning when the screen was clicked and I also took the time to remove empty items on the dropdown menu at the top. Now everything that is listed leads to somewhere. I also put underlining underneath listed elements, but I'm undecided on how to style these.
+
+              I fixed the navigation button by deleting the JS code for the animation transition and just adding it to navigation function itself. This way, whatever triggers the side menu to open and close will also execute the animation.
+
+              I noticed that I accidentally created a CSS rule that applies for all "<a>" and I had to fiddle about to realign the social media buttons so that they're more compact. In the future, I'll divide these "<a>"'s based on their parent elements. Having a universal CSS rule for all "<a>"'s was convenient when this website was very basic, but now that the website is becoming more complicated, I need to start organising things better. Luckily, I've done this with most other elements.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Website Optimising Plus New Features</h2>
+            <h5>9th Feb 2022</h5>
+            <div class="fakeimg"></div>
+            <p>
+              I finally got around to adding a fade window when the side menu is open. 
+              I created a translucent black element that covered the whole screen and set the alpha to 0.4.
+              The width is set to 0%, but clicking on the button to open the side menu makes it 100% and vice versa.
+              I had issues with the z-index, because I didn't realise that an element with a z-index of 3 inside an element with
+              a z-index of 2 means that it's not going to draw over things with a z-index of 2. Crazy how that works.
+              <br>
+              I tried making it fade in and out, but the animations weren't graceful so I decided against it. Maybe I'll come back to this in the future if the transition is too jarring.
+              <br>
+              I spent a lot of time reorganising the elements into a better format, but the feedback page was untouched since I can't load PHP files. it looks like I screwed up the welcome message on the video page. Oops!
+              <br><br>
+              I changed the theme again but I'm not too happy with it. Maybe I'll never be happy with it, so I'm going to leave it alone now.
+            </p>
+          </div>
           <div class="card">
             <h2>Homepage And Calorie Calc Redesign.</h2>
             <h5>25th Jan 2023</h5>

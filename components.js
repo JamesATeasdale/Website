@@ -11,16 +11,15 @@ class Header extends HTMLElement {
                     <li><a href="video.html">Video</a></li>
                     <li class="dropdown"><a href="#">Projects</a>
                         <div class="dropdown-content">
-                            <a href="#home">Adventure</a>
-                            <a href="#scraper">Scraper</a>
-                            <a href="#chat">Chatbot</a>
                             <a href="spreadsheet.html">Calorie Calc</a>
                         </div>
                     </li>
-                    <li class="dropdown"><a href="jsgames.html">Games</a>
-                        <div class="dropdown-content">
-                            <a href="mechAliens.html">Mech Aliens</a>
-                        </div>
+                    <li class="dropdown">
+                        <a href="jsgames.html">Games</a>
+                            <div class="dropdown-content">
+                            <a href="jsgames.html">Minigames</a>
+                                <a href="mechAliens.html">Mech Aliens</a>
+                            </div>
                     </li>
                     <li><a href="questionnaire.php">Feedback</a></li>
                 </ul>
@@ -42,15 +41,11 @@ class Header extends HTMLElement {
                     <a href="smb://james@192.168.1.94/James/server/coding/html_playground/resources/james_teasdale.pdf" download="james_teasdale.pdf">CV</a>
                 </div>
             </div>
-            <div id="main">
-                    <span onclick="toggleNav();">
-                        <div class="container" onclick="navAnim(this)">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
-                        </div>
-                    </span>
-            </div>
+                <span id="container" onclick="toggleNav(this);">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </span>
       </header>
       <div class="social">
         <a href="https://www.twitter.com/ShyGuro"><img  src="./resources/twitter.png"></a>
@@ -67,24 +62,21 @@ customElements.define('header-component', Header);
 
 /* Navigation button in the top-right */
 
-function toggleNav() {
+function toggleNav(x) {
 	let sidenav = document.getElementById("sidenav");
     let dimscreen = document.getElementById("dimscreen");
-    main = document.getElementById("main");
+    let container = document.getElementById("container")
     sidenav.style.width = sidenav.style.width == "250px" ? '0' : '250px';
     dimscreen.style.width = dimscreen.style.width == '100%' ? '0%' : '100%';
-}
-
-function navAnim(x) {
-    x.classList.toggle("change");
+    container.classList.toggle("change")
 }
 
 /* Choose random video on webm.html */
 
 function randomVid() {
-    var video = document.getElementById('video');
+    let video = document.getElementById('video');
     // change the arbitrary number to the number of files in webms/, then run enumerate.py
-    var number = Math.floor(Math.random() * 42) + 1;
+    let number = Math.floor(Math.random() * 42) + 1;
     video.src = "webms/" + number +'.webm#t=0.1';
 }
 
