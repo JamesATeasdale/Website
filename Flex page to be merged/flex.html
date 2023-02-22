@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>James Teasdale</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flex.js">
+</head>
+<script>
+    function justifycontent(value='none'){
+        return document.getElementById("flex").style.justifyContent = value;
+    }
+
+    function aligncontent(value='none'){
+        return document.getElementById("flex").style.alignContent = value;
+    }
+
+    function alignitems(value='none'){
+        return document.getElementById("grid").style.alignItems = value;
+    }
+
+    function alignself(value='none'){
+        console.log(value)
+        return document.getElementById("griditem").style.alignSelf = value;
+    }
+    
+</script>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="flex.html">FLEX</a>
+    <a href="http://109.155.162.209/">WEBSITE</a>
+    <a href="https://www.youtube.com/">YOUTUBE</a>
+</div>
+<body>
+    <div class="header"><h1>Flex</h1></div>
+    <div class="welcome">
+        <p>This is a page where I messed around with flex elements as it's something I've nearly been introduced to thanks to Codecademy!</p>
+    </div>
+    <div class="flexbar">
+        <div class="flexdropdown">
+            <button class="flexdropdown-btn">Justify Content</button>
+            <div class="flexdropdown-content">
+                <a onclick="justifycontent('flex-start')">flex-start</a>
+                <a onclick="justifycontent('center')">center</a>
+                <a onclick="justifycontent('flex-end')">flex-end</a>
+                <a onclick="justifycontent('space-around')">space-around</a>
+                <a onclick="justifycontent('space-between')">space-between</a>
+                <a onclick="justifycontent('space-evenly')">space-evenly</a>
+            </div>
+        </div>
+        <div class="flexdropdown">
+            <button class="flexdropdown-btn">Align Content</button>
+            <div class="flexdropdown-content">
+                <a onclick="aligncontent('flex-start')">flex-start</a>
+                <a onclick="aligncontent('center')">center</a>
+                <a onclick="aligncontent('flex-end')">flex-end</a>
+                <a onclick="aligncontent('space-around')">space-around</a>
+                <a onclick="aligncontent('space-between')">space-between</a>
+                <a onclick="aligncontent('space-evenly')">space-evenly</a>
+                <a onclick="aligncontent('stretch')">stretch</a>
+            </div>
+        </div>
+    </div>
+        <div id="flex" class="flex">
+            <div id="flexitem" onclick="alignself('center')" style="background-color: red; width: 100px; height: 100px;">A</div>
+            <div id="flexitem" style="background-color: blue; width: 100px; height: 100px;">B</div>
+            <div id="flexitem" style="background-color: yellow; width: 100px; height: 100px;">C</div>
+            <div id="flexitem" style="background-color: green; width: 100px; height: 100px;">D</div>
+            <div id="flexitem" style="background-color: purple; width: 100px; height: 100px;">E</div>
+        </div>
+        <div class="flexbar">
+            <div class="flexdropdown">
+                <button class="flexdropdown-btn">Align Items</button>
+                <div class="flexdropdown-content">
+                    <a onclick="alignitems('flex-start')">flex-start</a>
+                    <a onclick="alignitems('center')">center</a>
+                    <a onclick="alignitems('flex-end')">flex-end</a>
+                    <a onclick="alignitems('space-evenly')">space-evenly</a>
+                    <a onclick="alignitems('space-around')">space-around</a>
+                    <a onclick="alignitems('space-between')">space-between</a>
+                    <a onclick="alignitems('stretch')">stretch</a>
+                </div>
+            </div>
+            <div class="flexdropdown">
+                <button class="flexdropdown-btn">Align Self</button>
+                <div class="flexdropdown-content">
+                    <a onclick="alignself('flex-start')">flex-start</a>
+                    <a onclick="alignself('center')">center</a>
+                    <a onclick="alignself('flex-end')">flex-end</a>
+                    <a onclick="alignself('space-evenly')">space-evenly</a>
+                    <a onclick="alignself('space-around')">space-around</a>
+                    <a onclick="alignself('space-between')">space-between</a>
+                    <a onclick="alignself('stretch')">stretch</a>
+                </div>
+            </div>
+        </div>
+        <div id="grid" class="grid">
+            <div id="griditem" onclick="alignself('flex-start')" style="background-color: red; width: 100px; height: 100px;">A</div>
+            <div id="griditem" onclick="alignself('center')" style="background-color: blue; width: 100px; height: 100px;">B</div>
+            <div id="griditem" onclick="alignself('flex-end')" style="background-color: yellow; width: 100px; height: 100px;">C</div>
+            <div id="griditem" onclick="alignself('stretch')" style="background-color: green; width: 100px; height: 100px;">D</div>
+            <div id="griditem" onclick="alignself('baseline')" style="background-color: purple; width: 100px; height: 100px;">E</div>
+        </div>
+</body>

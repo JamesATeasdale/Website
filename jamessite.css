@@ -137,9 +137,9 @@ header {
     background-color: #ffffff;
   }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+.dropdown:hover .dropdown-content {
+display: block;
+}
 
 /* This is for the Side Nav */
 .sidenav  {

@@ -1,0 +1,141 @@
+* {
+    font-size: larger;
+    text-align: center;
+}
+
+body {
+    background-color: bisque;
+    position: relative;
+    top: 80px;
+}
+
+.header h1 {
+    font-size: 75px;
+    text-decoration: underline;
+}
+
+.navbar {
+    background-color: black;
+    position: fixed;
+    top: 5px;
+    left: 2px;
+    right: 2px;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+    border: 1 solid black;
+    border-radius: 10px;
+}
+.navbar a {
+    font-weight: 800;
+    text-decoration: none;
+    color: rgb(2, 101, 188);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.2s;
+    margin: 0 75px;
+    padding: 5px 0;
+;
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.welcome {
+    border: 2px solid green;
+    margin: 0 auto;
+    width: 50%;
+    padding: 0 30px;
+    background-color: rgb(255, 227, 127);
+    position: relative;
+    border-radius: 10px;
+}
+
+.listbox {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: smaller;
+    margin: 0 auto;
+    width: 600px;
+    position: relative;
+}
+
+
+.flexbar {
+    overflow: hidden;
+    background-color: rgb(55, 23, 23);
+    margin: 50px;
+    width: 1000px;
+}
+
+.flexbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.flexdropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.flexdropdown .flex-btn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: rgb(255, 83, 83);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.flexdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.flexdropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.flexdropdown:hover .flexdropdown-content {
+    display: block;
+}
+
+#flex {
+    height: 500px;
+    width: 1000px;
+    flex-wrap: wrap;
+    display: flex;
+    background-color: aqua;
+    margin: 0 auto;
+    border: 5px solid rgb(255, 0, 0);
+}
+
+#grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px;
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
+    margin: 0 auto;
+    border: 5px solid rgb(255, 0, 0);
+}
+
+.griditem {
+
+}
